@@ -266,7 +266,7 @@ class SingleManageArticle extends StatelessWidget {
 
     Get.bottomSheet(
 
-        Container(
+ Container(
           height: Get.height/1.5,
           decoration: const BoxDecoration(
             color: Colors.white,
@@ -278,11 +278,13 @@ class SingleManageArticle extends StatelessWidget {
           ),
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Column(children:   [
-              const Text("انتخاب دسته بندی"),
-              const SizedBox(height: 8,)
-              ,cats(textTheme)
-            ]),
+            child: SingleChildScrollView(
+              child: Column(children:   [
+                const Text("انتخاب دسته بندی"),
+                const SizedBox(height: 8,)
+                ,cats(textTheme)
+              ]),
+            ),
           ),
         ),
         isScrollControlled: true,
